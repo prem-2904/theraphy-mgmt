@@ -1,0 +1,43 @@
+<div class="px-4 py-6 shadow flex flex-col gap-2 cursor-pointer transition-all duration-500">
+    <div class="flex items-center gap-4">
+        <img class="w-10 h-10 rounded-full" [src]="therapistProfile().picture.thumbnail" alt="Logo">
+        <div class="font-medium dark:text-white">
+            <a [routerLink]="therapistProfile().id" class="hover:link">{{therapistProfile().name.first}}</a>
+            <div class="text-sm text-gray-500 dark:text-gray-400">Joined in August 2014</div>
+        </div>
+    </div>
+    <div class="therapist-details pt-4">
+        <div class="flex gap-2 items-start">
+            <span
+                class='inline-flex items-center bg-red-100 text-red-700 text-xs font-medium mr-2 justify-center rounded-full p-1'>
+                <svg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M1 3.99998L3.31008 6.31278C3.50527 6.5082 3.82193 6.50834 4.01729 6.31309L9 1.33331'
+                        stroke='#DC2626' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </span>
+            <div class="font-medium dark:text-white">
+                <div>Specilization</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Sleep, Depression, OCD, Relationship issues
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-2 items-start">
+            <span
+                class='inline-flex items-center bg-red-100 text-red-700 text-xs font-medium mr-2 justify-center rounded-full p-1'>
+                <svg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M1 3.99998L3.31008 6.31278C3.50527 6.5082 3.82193 6.50834 4.01729 6.31309L9 1.33331'
+                        stroke='#DC2626' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </span>
+            <div class="font-medium dark:text-white">
+                <div>Languages Known</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Tamil, English</div>
+            </div>
+        </div>
+    </div>
+    <div class="therapist-action pt-4 flex gap-2 justify-end">
+        <button type='button'
+            class='py-2.5 px-6 text-sm bg-green-50 text-white cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-green-100'>Book
+            Session</button>
+    </div>
+</div>

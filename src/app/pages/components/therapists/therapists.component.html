@@ -1,1 +1,11 @@
-<p>therapists works!</p>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    @if (therapists.isLoading()) {
+        Loading!!!
+    }
+    @let therapistList = therapists.value()?.results;
+    @if (therapistList?.length) {
+        @for (doctor of therapistList; track $index) {
+        <app-feature-therapist-profile [therapistProfile]="doctor" />
+        }
+    }
+</div>

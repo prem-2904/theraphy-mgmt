@@ -1,10 +1,10 @@
 import { Component, ElementRef, inject } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [MatSidenavModule],
+  imports: [MatSidenavModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
